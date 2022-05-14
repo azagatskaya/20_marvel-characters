@@ -5,7 +5,8 @@ new Swiper('.image-slider', {
 	},
 	scrollbar: {
 		el: '.swiper-scrollbar',
-		draggable: true
+		draggable: true,
+		sensitivity: 0.6
 	},
 	mousewheel: {
 		sensitivity: 1,
@@ -16,13 +17,17 @@ new Swiper('.image-slider', {
 	// Responsive breakpoints
 	breakpoints: {
 		// // when window width is >= 540px
-		540: {
+		520: {
 			slidesPerView: 2,
 			spaceBetween: -50
 		},
 		// when window width is >= 700px
 		700: {
 			slidesPerView: 3,
+			spaceBetween: -40
+		},
+		1100: {
+			slidesPerView: 4,
 			spaceBetween: -40
 		}
 	}
@@ -62,13 +67,14 @@ function renderSlides() {
 					<div class="image-slider__image">
 						<img class="popup-link" id="${el.id}" src="${el.image}" alt="${el.id}">
 					</div>
-					</div>`;
+				</div>`;
 		slider.innerHTML += slide;
 	});
 	addSlideListeners();
 }
 
 // <div class="image-slider__hero-name">${el.name}</div>
+
 function renderPopup(e) {
 	heroes.forEach(el => {
 		if (el.id === e.target.id) {
