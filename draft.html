@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+
+	<!-- <div class="image-slider__slide swiper-slide">
+					<div class="image-slider__image">
+						<img class="popup-link" id="batman" src="https://upload.wikimedia.org/wikipedia/ru/a/a2/Batman_Jim_Lee.jpg" alt="">
+					</div>
+				</div>
+				<div class="image-slider__slide swiper-slide">
+					<div class="image-slider__image">
+						<img class="popup-link" id="superman" src="https://upload.wikimedia.org/wikipedia/ru/6/68/Superman01.jpg" alt="">
+					</div>
+				</div>
+				<div class="image-slider__slide swiper-slide">
+					<div class="image-slider__image">
+						<img class="popup-link" id="ironman" src="https://upload.wikimedia.org/wikipedia/ru/a/a5/Iron_man.jpg" alt="">
+					</div>
+				</div> -->
+
+
+
+	<div class="popup" id="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="" class="popup__close close-popup">x</a>
+				<div class="popup__title">Бэтмен</div>
+				<div class="popup__img-info-wrapper">
+					<div class="popup__img"><img src="https://upload.wikimedia.org/wikipedia/ru/a/a2/Batman_Jim_Lee.jpg" alt=""></div>
+					<div class="popup__info info">
+						<div class="info__item">
+							<div class="info__title">Вселенная:</div>
+							<div class="info__text">DC Comics</div>
+						</div>
+						<div class="info__item">
+							<div class="info__title">Альтер-эго:</div>
+							<div class="info__text">Брюс Уэйн</div>
+						</div>
+						<div class="info__item">
+							<div class="info__title">Род деятельности:</div>
+							<div class="info__text">борец с преступностью, филантроп, миллиардер</div>
+						</div>
+						<div class="info__item">
+							<div class="info__title">Друзья:</div>
+							<div class="info__text">Робин, Бэтгерл</div>
+						</div>
+						<div class="info__item">
+							<div class="info__title">Суперсилы:</div>
+							<div class="info__text">интеллект, обширные познания, знания боевых искусств, ловкость</div>
+						</div>
+					</div>
+				</div>
+				<div class="info__title">Подробности:</div>
+				<div class="popup__text">
+					по популярности человек-летучая мышь может сравниться только с Суперменом. Его образ кажется очень мистическим и мрачным: черный костюм с развевающимся плащом, устрашающий Бэтмобиль, штаб-квартира в сырой пещере. Его биография
+					настолько же темна, как
+					и образ. В детстве у него на глазах убили родителей, и юный Брюс поклялся всеми силами защищать родной Готэм от преступности. Брюс знаменит, несмотря на пожилой возраст: первый выпуск с его участием вышел аж в 1939 году. С каждым
+					годом популярность
+					только крепнет. Большую роль в этом сыграли экранизации: «Темный рыцарь», сериал «Готэм» и несколько одноименных картин. Главная причина такой любви среди фанатов — мысль, что каждый может стать Бэтменом. Если подумать, это один
+					из немногих героев,
+					кто добился своего положения за счет ума и упорства, а не за счет мутаций.
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+
+let newPopup = `
+<div class="popup open" id="popup">
+	<div class="popup__body">
+		<div class="popup__content">
+			<a href="" class="popup__close close-popup">x</a>
+			<div class="popup__title">${el.name}</div>
+			<div class="popup__img-info-wrapper">
+				<div class="popup__img"><img src="${el.image}" alt=""></div>
+				<div class="popup__info info">
+					<div class="info__item">
+						<div class="info__title">Вселенная:</div>
+						<div class="info__text">${el.universe}</div>
+					</div>
+					<div class="info__item">
+						<div class="info__title">Альтер-эго:</div>
+						<div class="info__text">${el.alterego}</div>
+					</div>
+					<div class="info__item">
+						<div class="info__title">Род деятельности:</div>
+						<div class="info__text">${el.occupation}</div>
+					</div>
+					<div class="info__item">
+						<div class="info__title">Друзья:</div>
+						<div class="info__text">${el.friends}</div>
+					</div>
+					<div class="info__item">
+						<div class="info__title">Суперсилы:</div>
+						<div class="info__text">${el.superpowers}</div>
+					</div>
+				</div>
+			</div>
+			<div class="info__title">Подробности:</div>
+			<div class="popup__text">${el.details}</div>
+		</div>
+	</div>
+</div>`;
+document.querySelector('body').innerHTML += newPopup;
+
+
+</html>

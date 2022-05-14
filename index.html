@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Marvel Heroes</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/nullstyle.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<h1 class="title">Герои Marvel</h1>
+		<!-- Slider main container -->
+		<div class="image-slider swiper">
+			<!-- Additional required wrapper -->
+			<div class="image-slider__wrapper swiper-wrapper">
+				<!-- Slides -->
+
+
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+
+			<!-- If we need scrollbar -->
+			<div class="swiper-scrollbar"></div>
+		</div>
+
+	</div>
+
+	<div class="popup" id="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="" class="popup__close close-popup">x</a>
+				<div class="popup__title">Бэтмен</div>
+				<div class="popup__img-info-wrapper">
+					<div class="popup__img"><img src="https://upload.wikimedia.org/wikipedia/ru/a/a2/Batman_Jim_Lee.jpg" alt=""></div>
+					<div class="popup__info info">
+						<div class="info__item">
+							<div class="info__title">Вселенная:</div>
+							<div class="info__text" id="universe">DC Comics</div>
+						</div>
+						<div class="info__item">
+							<div class="info__title">Альтер-эго:</div>
+							<div class="info__text" id="alterego">Брюс Уэйн</div>
+						</div>
+						<div class="info__item">
+							<div class="info__title">Род деятельности:</div>
+							<div class="info__text" id="occupation">борец с преступностью, филантроп, миллиардер</div>
+						</div>
+						<div class="info__item">
+							<div class="info__title">Друзья:</div>
+							<div class="info__text" id="friends">Робин, Бэтгерл</div>
+						</div>
+						<div class="info__item">
+							<div class="info__title">Суперсилы:</div>
+							<div class="info__text" id="superpowers">интеллект, обширные познания, знания боевых искусств, ловкость</div>
+						</div>
+					</div>
+				</div>
+				<div class="info__title">Подробности:</div>
+				<div class="popup__text" id="details">
+					по популярности человек-летучая мышь может сравниться только с Суперменом. Его образ кажется очень мистическим и мрачным: черный костюм с развевающимся плащом, устрашающий Бэтмобиль, штаб-квартира в сырой пещере. Его биография
+					настолько же темна, как
+					и образ. В детстве у него на глазах убили родителей, и юный Брюс поклялся всеми силами защищать родной Готэм от преступности. Брюс знаменит, несмотря на пожилой возраст: первый выпуск с его участием вышел аж в 1939 году. С каждым
+					годом популярность
+					только крепнет. Большую роль в этом сыграли экранизации: «Темный рыцарь», сериал «Готэм» и несколько одноименных картин. Главная причина такой любви среди фанатов — мысль, что каждый может стать Бэтменом. Если подумать, это один
+					из немногих героев,
+					кто добился своего положения за счет ума и упорства, а не за счет мутаций.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="./assets/js/data.js"></script>
+	<script src="./assets/js/script.js"></script>
+</body>
+
+</html>
