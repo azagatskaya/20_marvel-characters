@@ -120,7 +120,7 @@ function handleStarMouseover(e) {
 }
 
 function setStars(starId) {
-	for (let i = 0; i <= 5; i++) {
+	for (let i = 0; i <= 10; i++) {
 		if (i <= starId) {
 			stars[i].innerHTML = 'star';
 		} else {
