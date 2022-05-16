@@ -99,8 +99,8 @@ const rating = document.querySelector('.popup__rating');
 function checkRatingInLs(e) {
 	if (isRatingInLS(e.target.id)) {
 		setRating(localStorage.getItem(e.target.id));
-		addRatingListeners();
-	} else {}
+	}
+	addRatingListeners();
 }
 
 function isRatingInLS(id) {
