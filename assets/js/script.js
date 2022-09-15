@@ -105,9 +105,9 @@ const stars = document.querySelectorAll(".rating__star");
 const rating = document.querySelector(".popup__rating");
 
 function checkRatingInLs(e) {
-  if (isRatingInLS(e.target.id)) {
-    setRating(localStorage.getItem(e.target.id));
-  }
+  isRatingInLS(e.target.id)
+    ? setRating(localStorage.getItem(e.target.id))
+    : setRating(0);
   addRatingListeners();
 }
 
@@ -129,18 +129,26 @@ function handleStarMouseover(e) {
 }
 
 function setStars(starId) {
+  console.log("starId", starId);
   for (let i = 0; i <= 10; i++) {
     if (i <= starId) {
-      stars[i].innerHTML = "star";
-      stars[i].classList.remove("material-symbols-outlined");
-      stars[i].classList.add("material-symbols-rounded");
+      setStarFilled(stars[i]);
     } else {
-      stars[i].innerHTML = "grade";
-      stars[i].classList.remove("material-symbols-rounded");
-      stars[i].classList.add("material-symbols-outlined");
+      setStarOutlined(stars[i]);
     }
   }
 }
+const setStarFilled = (elem) => {
+  elem.innerHTML = "star";
+  elem.classList.remove("material-symbols-outlined");
+  elem.classList.add("material-symbols-rounded");
+};
+
+const setStarOutlined = (elem) => {
+  elem.innerHTML = "grade";
+  elem.classList.remove("material-symbols-rounded");
+  elem.classList.add("material-symbols-outlined");
+};
 
 function handleStarClick(e) {
   localStorage.setItem(rating.id, e.target.id);
@@ -154,19 +162,13 @@ function setRating(starId) {
 
 function emptyRating() {
   stars.forEach((el) => {
-    el.classList.remove("material-symbols-outlined");
-    el.classList.add("material-symbols-rounded");
-    el.innerHTML = "grade";
+    setStarOutlined(el);
   });
 }
 
 function handleRatingMouseout(e) {
   const popupContent = document.querySelector(".popup__content");
-  if (e.relatedTarget === popupContent) {
-    if (isRatingInLS(rating.id)) {
-      setRating(localStorage.getItem(rating.id));
-    } else {
-      emptyRating();
-    }
-  }
+  e.relatedTarget === popupContent && isRatingInLS(rating.id)
+    ? setRating(localStorage.getItem(rating.id))
+    : emptyRating();
 }
