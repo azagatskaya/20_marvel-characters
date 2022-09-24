@@ -123,13 +123,11 @@ function addRatingListeners() {
 }
 
 function handleStarMouseover(e) {
-  console.log("star mouseover");
   setStars(e.target.id);
   rating.addEventListener("mouseout", handleRatingMouseout);
 }
 
 function setStars(starId) {
-  console.log("starId", starId);
   for (let i = 0; i <= 10; i++) {
     if (i <= starId) {
       setStarFilled(stars[i]);
