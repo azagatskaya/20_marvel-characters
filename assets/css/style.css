@@ -193,12 +193,15 @@ body {
 }
 
 .popup__rating {
+  width: 264px;
+  justify-self: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  margin-right: 22px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .rating__star {
